@@ -35,9 +35,14 @@ class LoginFragment : BaseFragmentBinding<FragmentLoginBinding>() {
                 binding.inputEmail.error = getString(R.string.wrong_email_format)
             }
             password.isEmpty() -> {
+                binding.inputEmail.isErrorEnabled = false
                 binding.inputPassword.error = getString(R.string.mandatory_password)
             }
-            else -> login(email, password)
+            else -> {
+                binding.inputEmail.isErrorEnabled = false
+                binding.inputPassword.isErrorEnabled = false
+                login(email, password)
+            }
         }
     }
 
