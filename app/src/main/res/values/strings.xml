@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Login Baubap</string>
+    <string name="something_went_wrong">Algo salió mal</string>
+    <string name="press_again_to_exit">Presiona de nuevo para salir</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="cancel">Cancelar</string>
+    <string name="yes_im_sure">Sí, estoy seguro</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="email_is_mandatory">Debes ingresar tu correo</string>
+    <string name="wrong_email_format">Tu correo está mal escrito</string>
+    <string name="mandatory_password">Debes ingresar tu contraseña</string>
+    <string name="invalid_credentials">Credenciales inválidas</string>
+    <string name="error_in_logout">Error al cerrar sesión</string>
+</resources>
