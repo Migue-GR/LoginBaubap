@@ -63,14 +63,14 @@ class LoginViewModelTest {
         val mockBaubapException = LoginBaubapException(ERROR_INVALID_CREDENTIALS)
         val mockResponse = UseCaseResult.Error(mockBaubapException)
         every {
-            testSubject.login(RIGHT_EMAIL, RIGHT_PASSWORD)
+            testSubject.login(WRONG_EMAIL, WRONG_PASSWORD)
         } answers {
             resultLiveData {
                 throw mockBaubapException
             }
         }
 
-        testSubject.login(RIGHT_EMAIL, RIGHT_PASSWORD).observeForever { result ->
+        testSubject.login(WRONG_EMAIL, WRONG_PASSWORD).observeForever { result ->
             if (result is UseCaseResult.Error) {
                 assert(result == mockResponse)
             }
@@ -81,5 +81,7 @@ class LoginViewModelTest {
         private const val RIGHT_ID = "1"
         private const val RIGHT_EMAIL = "miguenew01@gmail.com"
         private const val RIGHT_PASSWORD = "123"
+        private const val WRONG_EMAIL = "wrong@email.com"
+        private const val WRONG_PASSWORD = "wrong_password"
     }
 }
